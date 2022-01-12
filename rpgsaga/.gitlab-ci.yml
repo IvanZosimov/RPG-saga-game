@@ -1,0 +1,15 @@
+image: mcr.microsoft.com/dotnet/sdk:5.0
+
+testSaga:
+  tags:
+    - docker
+  stage: testSaga
+  
+  script:
+    - cd rpgsaga/RpgSaga.Tests
+    - dotnet test
+
+  rules:
+  - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+    changes:
+      - rpgsaga/**/*
