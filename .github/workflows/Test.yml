@@ -23,6 +23,5 @@ jobs:
         with:
           dotnet-version: ${{ matrix.dotnet }}
       - run: |
-            dotnet --info
             dotnet build "rpgsaga/RpgSaga.sln"
             dotnet test "rpgsaga/RpgSaga.sln"
