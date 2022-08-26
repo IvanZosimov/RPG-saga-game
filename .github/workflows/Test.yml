@@ -23,5 +23,6 @@ jobs:
         with:
           dotnet-version: ${{ matrix.dotnet }}
       - run: |
+            dotnet restore "rpgsaga/RpgSaga.sln"
             dotnet build "rpgsaga/RpgSaga.sln"
             dotnet test "rpgsaga/RpgSaga.sln"
