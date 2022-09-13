@@ -3,7 +3,7 @@
   <PropertyGroup>
 	<OutputType>library</OutputType>
     <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <Version>1.0.1.0</Version>
 	<CodeAnalysisRuleSet>../_stylecop/stylecop.ruleset</CodeAnalysisRuleSet>
 	<GenerateFullPaths>true</GenerateFullPaths>
