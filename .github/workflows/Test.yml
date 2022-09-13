@@ -9,7 +9,7 @@ jobs:
     continue-on-error: true
     strategy:
       matrix:
-        dotnet: ["5.0"]
+        dotnet: ["5.0", "7.0", "3.1", "x"]
         os: ['ubuntu-latest','macos-latest', 'windows-latest']
     name: Dotnet ${{ matrix.dotnet }} sample
     steps:
@@ -18,7 +18,7 @@ jobs:
         
       - name: ${{matrix.os}} ${{matrix.quality}}
 
-        uses: actions/setup-dotnet@main
+        uses: IvanZosimov/setup-dotnet@ADRdotnet
                 
         with:
           dotnet-version: ${{ matrix.dotnet }}
